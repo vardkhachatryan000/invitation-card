@@ -43,19 +43,37 @@ table {
 	border-spacing: 0;
 }
 
-* {
+*, body {
 	margin: 0;
 	padding: 0;
 }
 
-body {
-    width: 100%;
+main {
+	width: 100%;
+	max-width: 560px;
     height: auto;
-	
+	margin: 0 auto;
 }
 
 .container {
 	width: 90%;
 	height: 100%;
 	margin: 0 auto;
+}
+
+.column-flexable {
+	display: flex;
+	flex-direction: column;
+}
+
+.row-flex {
+	display: flex;
+
+}
+
+@font-face {
+	font-family: ArmAllergoU;
+	src: url(../fonts/armallegro-unicode/ArmAllegroU.ttf);
+	font-weight: normal;
+  	font-style: normal;
 }
