@@ -68,12 +68,60 @@ main {
 
 .row-flex {
 	display: flex;
-
 }
 
 @font-face {
 	font-family: ArmAllergoU;
-	src: url(../fonts/armallegro-unicode/ArmAllegroU.ttf);
+	src: url(../fonts/ArmAllegroU.ttf);
+	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: SHK Dzeragir;
+	src: url(../fonts/SHK_Dzeragir.otf);
+	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: Sos Banff;
+	src: url(../fonts/SOSBANFF_U.ttf);
+	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: CosiArm;
+	src: url(../fonts/CosiArm.ttf);
+	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: Kotayk;
+	src: url(../fonts/Kotayk-Regular.ttf);
+	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: Davel Aghvor;
+	src: url(../fonts/davel-aghvor.otf);
+	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: Braind Doctor;
+	src: url(../fonts/BraindDoctor.otf);
+	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: Arial;
+	src: url(../fonts/arial.ttf);
 	font-weight: normal;
   	font-style: normal;
 }

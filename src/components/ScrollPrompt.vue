@@ -21,7 +21,7 @@ export default {
 .scroll-secton {
     display: flex;
     justify-content: center;
-    margin-top: 15px 
+    margin-top: 42px;
 }
 
 .scroll-down {
@@ -31,10 +31,10 @@ export default {
     z-index: 100;
     text-decoration: none;
     text-shadow: 0;
-    width: 13px;
-    height: 13px;
-    border-bottom: 2px solid #000;
-    border-right: 2px solid #000;
+    width: 45px;
+    height: 45px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
     z-index: 9;
     left: 50%;
     -webkit-transform: translate(-50%, 0%) rotate(45deg);

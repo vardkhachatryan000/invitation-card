@@ -1,7 +1,6 @@
 <template>
   <div>
     <intro-component></intro-component>
-    <scroll-prompt href="content"></scroll-prompt>
     <content-component></content-component>
   </div>
 </template>
@@ -9,16 +8,24 @@
 <script>
 import IntroComponent from "./IntroComponent.vue";
 import ContentComponent from "./ContentComponent.vue";
-import ScrollPrompt from "./ScrollPrompt.vue";
 
 export default {
   name: 'MainComponent',
   components: {
     IntroComponent,
     ContentComponent,
-    ScrollPrompt
+  },
+  data() {
+    return {
+      mapUrl: `https://maps.googleapis.com/maps/api/js?key=AIzaSyDT5tYgSLeibzZQJblvhoEiWm9gCt0JBmo`
+    }
+  },
+  created() {
+    const script = document.createElement('script');
+    script.src = this.mapUrl;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
   }
 }
 </script>
-
-<style></style>
