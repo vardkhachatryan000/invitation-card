@@ -37,7 +37,7 @@ export default {
           place: "Տեղերի վանք",
           url: "https://hy.wikipedia.org/wiki/%D5%8F%D5%A5%D5%B2%D5%A5%D6%80%D5%AB_%D5%BE%D5%A1%D5%B6%D6%84",
           time: "15:00",
-          image: "tegher.png",
+          image: "tegher.jpg",
           position: { lat: 40.345070460922635, lng: 44.23993367680197 }
         },
         {

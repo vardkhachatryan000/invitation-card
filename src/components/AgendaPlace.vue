@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col">
+  <div class="container flex flex-col">
     <a :href="url" class="container flex items-end justify-around mb-3">
       <div class="w-12 overflow-hidden">
         <img :src="getIMGPath(icon)" :alt="image" class="icon">

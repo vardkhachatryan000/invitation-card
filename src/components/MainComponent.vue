@@ -2,18 +2,21 @@
   <div>
     <intro-component></intro-component>
     <content-component></content-component>
+    <form-component></form-component>
   </div>
 </template>
 
 <script>
 import IntroComponent from "./IntroComponent.vue";
 import ContentComponent from "./ContentComponent.vue";
+import FormComponent from "./Form.vue";
 
 export default {
   name: 'MainComponent',
   components: {
     IntroComponent,
     ContentComponent,
+    FormComponent
   },
   data() {
     return {
