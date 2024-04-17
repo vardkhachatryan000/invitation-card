@@ -17,21 +17,21 @@
             </div>
             <div v-if="errorMessages.isGoing" class="text-xs text-error">Չեք գալի՞ս</div>
         </div>
+        <div>ՈՒ՞մ կողմից եք</div>
         <div>
-            <div>ՈՒ՞մ կողմից եք</div>
-            <div class="flex gap-2">
+            <div class="flex items-center gap-2">
                 <input type="radio" name="whosGuest" id="groom" value="փեսա" v-model="formData.whosGuest" required/>
                 <label for="groom">Փեսա</label>
             </div>
-            <div class="flex gap-2">
+            <div class="flex items-center gap-2">
                 <input type="radio" name="whosGuest" id="bride" value="հարս" v-model="formData.whosGuest" required/>
                 <label for="bride">Հարս</label>
             </div>
-            <div class="flex gap-2">
-                <input type="radio" disabled>
-                <label>Պատահական անցորդ եմ</label>
+            <div class="flex items-center gap-2">
+                <input type="radio" name="whosGuest" id="unknown" value="unknown" v-model="formData.whosGuest" required>
+                <label for="unknown">Պատահական անցորդ եմ</label>
             </div>
-            <div v-if="errorMessages.whosGuest" class="text-xs text-error">Չեք կողմնորոշվե՞լ ում կողմից եք</div>
+            <div v-if="errorMessages.whosGuest" class="text-xs text-error">{{ guestsErrorMessage}}</div>
         </div>
         <div class="mt-3">
             Խնդրում ենք նշել ձեր անուն ազգանունները
@@ -105,6 +105,7 @@ export default {
                 fullName: false,
                 whosGuest: false
             },
+            guestsErrorMessage: 'Չեք կողմնորոշվե՞լ ում կողմից եք'
         }
     },
     watch: {
@@ -123,8 +124,12 @@ export default {
         },
         async sendData() {
             this.errorMessages.isGoing = this.formData.isGoing === null;
-            this.errorMessages.whosGuest =  this.formData.whosGuest === null;           
+            this.errorMessages.whosGuest =  this.formData.whosGuest === null || this.formData.whosGuest === 'unknown';           
             this.errorMessages.fullName = !this.formData.guests[0].fullName;
+            
+            if (this.formData.whosGuest === 'unknown') {
+                this.guestsErrorMessage = "Նո նո նո՜";
+            }
 
             if(this.errorMessages.isGoing || this.errorMessages.fullName || this.errorMessages.whosGuest) {
                 return;
@@ -154,6 +159,7 @@ export default {
         },
         resetData() {
             this.formData.isGoing = null;
+            this.formData.whosGuest = null;
             this.formData.guests = [
                 { fullName: '' }
             ];

@@ -43,17 +43,25 @@ export default {
         title: computed(() => siteData.title),
         meta: [
           {
-            name: `description`,
-            content: computed(() => siteData.description),
-          },
-          {
             name: `og:title`,
             content: computed(() => siteData.meta[0].content),
           },
           {
+            name: `description`,
+            content: computed(() => siteData.description),
+          },
+          {
             name: 'og:image',
             content: computed(() => imageUrl)
-          }
+          },
+          {
+            name: 'og:url',
+            content: "https://wedding-event-info-4bc80.web.app/"
+          },
+          {
+            name: 'og:type',
+            content: "website"
+          },
         ],
       
       })
